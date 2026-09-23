@@ -56,6 +56,22 @@ export async function About() {
             </div>
           </div>
         </div>
+        <div className="grid grid-cols-3 gap-6 mt-16">
+          {about.gallery.map((item, i) => (
+            <div key={i}>
+              <div className="aspect-square bg-surface border border-dashed border-border flex items-center justify-center">
+                <span className="font-mono-label text-xs tracking-widest uppercase text-ink-muted">
+                  Photo {i + 1}
+                </span>
+              </div>
+              <Editable
+                path={`about.gallery.${i}.caption`}
+                value={item.caption}
+                className="font-mono-label text-[10px] tracking-widest uppercase text-ink-muted mt-3 block"
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

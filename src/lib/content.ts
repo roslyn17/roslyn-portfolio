@@ -40,6 +40,7 @@ export type SiteContent = {
     heading: string;
     paragraphs: string[];
     details: Detail[];
+    gallery: { caption: string }[];
   };
   contact: {
     eyebrow: string;

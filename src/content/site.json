@@ -81,6 +81,11 @@
         "label": "Location",
         "value": "Bay Area, CA"
       }
+    ],
+    "gallery": [
+      { "caption": "Caption 1" },
+      { "caption": "Caption 2" },
+      { "caption": "Caption 3" }
     ]
   },
   "contact": {
