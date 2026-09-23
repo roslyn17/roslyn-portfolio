@@ -9,13 +9,13 @@ export async function About() {
   return (
     <section id="about" className="py-24 border-b border-border">
       <div className="max-w-5xl mx-auto px-6">
+        <Editable
+          path="about.eyebrow"
+          value={about.eyebrow}
+          className="font-mono-label text-xs tracking-widest uppercase text-ink-muted block mb-6"
+        />
         <div className="grid grid-cols-1 sm:grid-cols-[20rem_1fr] gap-16 items-start">
           <div>
-            <Editable
-              path="about.eyebrow"
-              value={about.eyebrow}
-              className="font-mono-label text-xs tracking-widest uppercase text-ink-muted block mb-6"
-            />
             <Editable
               as="h2"
               path="about.heading"
