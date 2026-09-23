@@ -1,7 +1,10 @@
 import Image from "next/image";
-import { projects } from "./data";
+import { getContent } from "@/lib/content";
+import { Editable } from "./Editable";
 
-export function Projects() {
+export async function Projects() {
+  const { projects } = await getContent();
+
   return (
     <section id="work" className="py-24 border-b border-border">
       <div className="max-w-5xl mx-auto px-6">
@@ -12,7 +15,7 @@ export function Projects() {
           </span>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-border">
-          {projects.map((project) => (
+          {projects.map((project, i) => (
             <div key={project.id} className="bg-white group cursor-pointer">
               <div className="relative overflow-hidden bg-surface h-52">
                 <Image
@@ -25,9 +28,12 @@ export function Projects() {
               </div>
               <div className="p-7">
                 <div className="flex items-center justify-between mb-3">
-                  <h3 className="font-display text-2xl font-bold text-ink">
-                    {project.title}
-                  </h3>
+                  <Editable
+                    as="h3"
+                    path={`projects.${i}.title`}
+                    value={project.title}
+                    className="font-display text-2xl font-bold text-ink"
+                  />
                   <span
                     className={`font-mono-label text-[10px] tracking-widest uppercase px-2 py-1 ${
                       project.status === "Live"
@@ -38,17 +44,20 @@ export function Projects() {
                     {project.status}
                   </span>
                 </div>
-                <p className="text-sm text-ink-muted leading-relaxed mb-5">
-                  {project.description}
-                </p>
+                <Editable
+                  as="p"
+                  path={`projects.${i}.description`}
+                  value={project.description}
+                  className="text-sm text-ink-muted leading-relaxed mb-5 block"
+                />
                 <div className="flex gap-2 flex-wrap mb-5">
-                  {project.stack.map((tag) => (
-                    <span
-                      key={tag}
+                  {project.stack.map((tag, j) => (
+                    <Editable
+                      key={j}
+                      path={`projects.${i}.stack.${j}`}
+                      value={tag}
                       className="font-mono-label text-[10px] tracking-widest uppercase text-ink-muted border border-border px-2 py-1"
-                    >
-                      {tag}
-                    </span>
+                    />
                   ))}
                 </div>
                 <div className="flex items-center gap-6 border-t border-border pt-4">

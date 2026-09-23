@@ -1,0 +1,92 @@
+{
+  "hero": {
+    "eyebrow": "Hi, I'm Roslyn",
+    "titleLine1": "I like to",
+    "titleLine2": "build things.",
+    "ctaPrimary": "See my projects",
+    "ctaSecondary": "Get in touch"
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "Budgetly",
+      "description": "Personal finance tracker built in a weekend. CSV import, auto-categorization, and a clean spending breakdown.",
+      "stack": [
+        "React",
+        "Claude Code",
+        "SQLite"
+      ],
+      "status": "Live",
+      "url": "https://bucketly-two.vercel.app/",
+      "docs": "#",
+      "image": "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&h=500&fit=crop&auto=format"
+    },
+    {
+      "id": 2,
+      "title": "PaceAI",
+      "description": "Running plan generator powered by Claude. Input your goal race and current fitness — get a 12-week plan in seconds.",
+      "stack": [
+        "Next.js",
+        "Claude API",
+        "Vercel"
+      ],
+      "status": "Live",
+      "url": "#",
+      "docs": "#",
+      "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&h=500&fit=crop&auto=format"
+    },
+    {
+      "id": 3,
+      "title": "Shelf",
+      "description": "Track books you want to read, are reading, and have read. Syncs across devices. Built in 48 hours.",
+      "stack": [
+        "React Native",
+        "Expo",
+        "Firebase"
+      ],
+      "status": "In Progress",
+      "url": "#",
+      "docs": "#",
+      "image": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=500&fit=crop&auto=format"
+    }
+  ],
+  "about": {
+    "eyebrow": "About",
+    "heading": "Student, Builder, Hobbyist.",
+    "paragraphs": [
+      "Hi, I'm Roslyn. Every project on this site was built to solve a real problem, or just for fun. I'm based in the Bay Area, though originally from the East Coast.",
+      "I hold Bachelor's degrees in Computer Science and Business Management from Case Western Reserve University, and I'm currently pursuing my MBA at UC Berkeley Haas. Before business school, I spent 5 years as a Consultant at Deloitte, working with Big Tech clients on privacy and infrastructure/data center projects.",
+      "Outside of building and studying, I like staying active and spending time outdoors. Tennis is my favorite sport, and I'm currently working on improving my photography. I'm also on a mission to visit all 50 states, every national park, and every MLB ballpark."
+    ],
+    "details": [
+      {
+        "label": "Interests",
+        "value": "Tech, Sports, Nature, Photography"
+      },
+      {
+        "label": "Location",
+        "value": "San Francisco, CA"
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "headingLine1": "Let's work",
+    "headingLine2": "together.",
+    "links": [
+      {
+        "label": "Email",
+        "value": "roslyn.yang17@gmail.com",
+        "href": "mailto:roslyn.yang17@gmail.com"
+      },
+      {
+        "label": "LinkedIn",
+        "value": "linkedin.com/in/roslyn-yang",
+        "href": "https://linkedin.com/in/roslyn-yang-a59479164"
+      }
+    ]
+  },
+  "footer": {
+    "text": "Roslyn · 2026"
+  }
+}
