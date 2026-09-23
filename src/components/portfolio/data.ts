@@ -1,0 +1,61 @@
+export type Project = {
+  id: number;
+  title: string;
+  description: string;
+  stack: string[];
+  status: "Live" | "In Progress";
+  url: string;
+  docs: string;
+  image: string;
+};
+
+export const projects: Project[] = [
+  {
+    id: 1,
+    title: "DropNote",
+    description:
+      "A minimal note-dropping app — paste a thought, get a shareable link instantly. No accounts, no friction.",
+    stack: ["React", "Supabase", "Tailwind"],
+    status: "Live",
+    url: "#",
+    docs: "#",
+    image:
+      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=500&fit=crop&auto=format",
+  },
+  {
+    id: 2,
+    title: "PaceAI",
+    description:
+      "Running plan generator powered by Claude. Input your goal race and current fitness — get a 12-week plan in seconds.",
+    stack: ["Next.js", "Claude API", "Vercel"],
+    status: "Live",
+    url: "#",
+    docs: "#",
+    image:
+      "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&h=500&fit=crop&auto=format",
+  },
+  {
+    id: 3,
+    title: "Budgetly",
+    description:
+      "Personal finance tracker built in a weekend. CSV import, auto-categorization, and a clean spending breakdown.",
+    stack: ["React", "Python", "SQLite"],
+    status: "Live",
+    url: "https://bucketly-two.vercel.app/",
+    docs: "#",
+    image:
+      "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&h=500&fit=crop&auto=format",
+  },
+  {
+    id: 4,
+    title: "Shelf",
+    description:
+      "Track books you want to read, are reading, and have read. Syncs across devices. Built in 48 hours.",
+    stack: ["React Native", "Expo", "Firebase"],
+    status: "In Progress",
+    url: "#",
+    docs: "#",
+    image:
+      "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=500&fit=crop&auto=format",
+  },
+];
