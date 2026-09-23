@@ -14,9 +14,14 @@ export async function Projects() {
             {projects.length} projects
           </span>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-border">
+        <div className="grid grid-cols-1 sm:grid-cols-2">
           {projects.map((project, i) => (
-            <div key={project.id} className="bg-white group cursor-pointer">
+            <div
+              key={project.id}
+              className={`bg-white group cursor-pointer border-b border-border ${
+                i % 2 === 0 ? "sm:border-r" : ""
+              }`}
+            >
               <div className="relative overflow-hidden bg-surface h-52">
                 <Image
                   src={project.image}
