@@ -83,13 +83,17 @@
       }
     ],
     "gallery": [
-      { "caption": "Caption 2" },
-      { "caption": "Caption 3" }
+      {
+        "caption": "Caption 2"
+      },
+      {
+        "caption": "Caption 3"
+      }
     ]
   },
   "contact": {
     "eyebrow": "Contact",
-    "headingLine1": "Let's work",
+    "headingLine1": "Let's do something",
     "headingLine2": "together.",
     "links": [
       {
