@@ -9,7 +9,7 @@ export async function About() {
   return (
     <section id="about" className="py-24 border-b border-border">
       <div className="max-w-5xl mx-auto px-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-16 items-start">
+        <div className="grid grid-cols-1 sm:grid-cols-[20rem_1fr] gap-16 items-start">
           <div>
             <Editable
               path="about.eyebrow"
@@ -20,9 +20,9 @@ export async function About() {
               as="h2"
               path="about.heading"
               value={about.heading}
-              className="font-display text-5xl font-bold text-ink leading-tight mb-8 block"
+              className="font-display text-4xl font-bold text-ink leading-tight mb-8 block"
             />
-            <div className="overflow-hidden bg-surface h-96">
+            <div className="overflow-hidden bg-surface w-80 h-80 max-w-full">
               <Image
                 src={roslynPhoto}
                 alt="Roslyn"
@@ -30,7 +30,7 @@ export async function About() {
               />
             </div>
           </div>
-          <div className="pt-16">
+          <div>
             {about.paragraphs.map((p, i) => (
               <Editable
                 key={i}
