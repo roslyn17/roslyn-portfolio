@@ -14,14 +14,9 @@ export async function Contact() {
               value={contact.eyebrow}
               className="font-mono-label text-xs tracking-widest uppercase text-ink-muted block mb-6"
             />
-            <h2 className="font-display text-5xl font-bold text-ink leading-tight">
-              <Editable path="contact.headingLine1" value={contact.headingLine1} />
-              <br />
-              <Editable
-                path="contact.headingLine2"
-                value={contact.headingLine2}
-                className="italic font-light"
-              />
+            <h2 className="font-display text-6xl font-bold text-ink leading-tight tracking-tight whitespace-nowrap">
+              <Editable path="contact.headingLine1" value={contact.headingLine1} />{" "}
+              <Editable path="contact.headingLine2" value={contact.headingLine2} />
             </h2>
           </div>
           <div>

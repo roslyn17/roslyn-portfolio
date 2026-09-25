@@ -9,12 +9,10 @@
   "projects": [
     {
       "id": 1,
-      "title": "Budgetly",
-      "description": "Personal finance tracker built in a weekend. CSV import, auto-categorization, and a clean spending breakdown.",
+      "title": "bucketly",
+      "description": "Gamified bucket list app for travel and life goals. Curated lists, difficulty-based points, and levels from Beginner to Grandmaster.",
       "stack": [
-        "React",
-        "Claude Code",
-        "SQLite"
+        "Claude Code"
       ],
       "status": "Live",
       "url": "https://bucketly-two.vercel.app/",
@@ -84,17 +82,17 @@
     ],
     "gallery": [
       {
-        "caption": "Caption 2"
+        "caption": "Skiing in Colorado"
       },
       {
-        "caption": "Caption 3"
+        "caption": "Hanging out with the cacti at Joshua Tree National Park"
       }
     ]
   },
   "contact": {
     "eyebrow": "Contact",
-    "headingLine1": "Let's do something",
-    "headingLine2": "together.",
+    "headingLine1": "Get In",
+    "headingLine2": "Touch",
     "links": [
       {
         "label": "Email",

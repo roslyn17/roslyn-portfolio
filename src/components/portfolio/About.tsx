@@ -1,5 +1,7 @@
 import Image from "next/image";
 import roslynPhoto from "@/assets/roslyn.jpeg";
+import galleryPhoto2 from "@/assets/about-2.jpg";
+import galleryPhoto3 from "@/assets/about-3.jpg";
 import { getContent } from "@/lib/content";
 import { Editable } from "./Editable";
 
@@ -56,28 +58,32 @@ export async function About() {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-[20rem_1fr] gap-16 items-start mt-16">
+        <div className="grid grid-cols-2 gap-8 mt-16">
           <div>
-            <div className="aspect-square bg-surface border border-dashed border-border flex items-center justify-center">
-              <span className="font-mono-label text-xs tracking-widest uppercase text-ink-muted">
-                Photo 2
-              </span>
-            </div>
-            <Editable
-              path="about.gallery.0.caption"
-              value={about.gallery[0].caption}
-              className="font-mono-label text-[10px] tracking-widest uppercase text-ink-muted mt-3 block"
-            />
-          </div>
-          <div>
-            <div className="aspect-[16/9] bg-surface border border-dashed border-border flex items-center justify-center">
-              <span className="font-mono-label text-xs tracking-widest uppercase text-ink-muted">
-                Photo 3
-              </span>
+            <div className="aspect-[4/5] overflow-hidden bg-surface">
+              <Image
+                src={galleryPhoto3}
+                alt=""
+                className="w-full h-full object-cover"
+              />
             </div>
             <Editable
               path="about.gallery.1.caption"
               value={about.gallery[1].caption}
+              className="font-mono-label text-[10px] tracking-widest uppercase text-ink-muted mt-3 block"
+            />
+          </div>
+          <div>
+            <div className="aspect-[4/5] overflow-hidden bg-surface">
+              <Image
+                src={galleryPhoto2}
+                alt=""
+                className="w-full h-full object-cover object-top"
+              />
+            </div>
+            <Editable
+              path="about.gallery.0.caption"
+              value={about.gallery[0].caption}
               className="font-mono-label text-[10px] tracking-widest uppercase text-ink-muted mt-3 block"
             />
           </div>
