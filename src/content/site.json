@@ -15,9 +15,11 @@
         "Claude Code"
       ],
       "status": "Live",
-      "url": "https://bucketly-two.vercel.app/",
-      "docs": "#",
-      "image": "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&h=500&fit=crop&auto=format"
+      "url": "https://bucketly-two.vercel.app/login",
+      "demo": "#",
+      "docs": "https://drive.google.com/file/d/1oPy-jaRyYgmBAxmjCDLlGmBewckPmA4h/view?usp=sharing",
+      "image": "/projects/bucketly-logo.png",
+      "imageFit": "contain"
     },
     {
       "id": 2,
@@ -30,6 +32,7 @@
       ],
       "status": "Live",
       "url": "#",
+      "demo": "#",
       "docs": "#",
       "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&h=500&fit=crop&auto=format"
     },
@@ -44,6 +47,7 @@
       ],
       "status": "In Progress",
       "url": "#",
+      "demo": "#",
       "docs": "#",
       "image": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=500&fit=crop&auto=format"
     },
@@ -58,6 +62,7 @@
       ],
       "status": "Live",
       "url": "#",
+      "demo": "#",
       "docs": "#",
       "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=500&fit=crop&auto=format"
     }
