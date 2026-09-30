@@ -21,7 +21,7 @@ export async function Projects() {
           {projects.map((project, i) => (
             <div
               key={project.id}
-              className={`bg-white group cursor-pointer border-b border-border ${
+              className={`bg-white group cursor-pointer border-b border-border flex flex-col ${
                 i % 2 === 0 ? "sm:border-r" : ""
               }`}
             >
@@ -39,7 +39,7 @@ export async function Projects() {
                   } transition-transform duration-500 group-hover:scale-105`}
                 />
               </a>
-              <div className="p-7">
+              <div className="p-7 flex flex-col flex-1">
                 <div className="flex items-center justify-between mb-3">
                   <a {...linkProps(project.url)}>
                     <Editable
@@ -64,7 +64,7 @@ export async function Projects() {
                   as="p"
                   path={`projects.${i}.description`}
                   value={project.description}
-                  className="text-sm text-ink-muted leading-relaxed mb-5 block"
+                  className="text-sm text-ink-muted leading-relaxed mb-5 block flex-1"
                 />
                 <div className="flex gap-2 flex-wrap mb-5">
                   {project.stack.map((tag, j) => (

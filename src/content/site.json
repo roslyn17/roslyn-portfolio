@@ -10,8 +10,13 @@
     {
       "id": 1,
       "title": "bucketly",
-      "description": "Gamified bucket list app for travel and life goals. Curated lists, difficulty-based points, and levels from Beginner to Grandmaster.",
+      "description": "Gamified bucket list app for travel and life goals. Browse curated lists like U.S. national parks, earn points based on difficulty, level up from Beginner to Grandmaster, and share your progress.",
       "stack": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind",
+        "Supabase",
+        "Vercel",
         "Claude Code"
       ],
       "status": "Live",
@@ -23,12 +28,16 @@
     },
     {
       "id": 2,
-      "title": "PaceAI",
-      "description": "Running plan generator powered by Claude. Input your goal race and current fitness — get a 12-week plan in seconds.",
+      "title": "Pep Squad",
+      "description": "A silly motivation app. Pick a character from your squad, like a drill sergeant, a golden retriever, or a disappointed Victorian ghost, and get an AI pep talk read out loud in their voice.",
       "stack": [
-        "Next.js",
+        "React Native",
+        "Expo",
+        "TypeScript",
         "Claude API",
-        "Vercel"
+        "Vercel",
+        "Upstash Redis",
+        "Claude Code"
       ],
       "status": "Live",
       "url": "#",
