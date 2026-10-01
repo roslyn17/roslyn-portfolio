@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { getContent } from "@/lib/content";
-import { DemoLink } from "./DemoLink";
+import { DemoLink, VideoPopupLink } from "./DemoLink";
 import { Editable } from "./Editable";
 
 const linkProps = (href: string) =>
@@ -50,16 +50,26 @@ export async function Projects() {
                       className="font-display text-2xl font-bold text-ink"
                     />
                   </a>
-                  <a
-                    {...linkProps(project.url)}
-                    className={`font-mono-label text-[10px] tracking-widest uppercase px-2 py-1 ${
-                      project.status === "Live"
-                        ? "bg-ink text-white"
-                        : "bg-surface text-ink-muted"
-                    }`}
-                  >
-                    {project.status}
-                  </a>
+                  {project.status === "Demo" && project.demo !== "#" ? (
+                    <VideoPopupLink
+                      href={project.demo}
+                      title={project.title}
+                      className="font-mono-label text-[10px] tracking-widest uppercase px-2 py-1 bg-ink text-white"
+                    >
+                      {project.status}
+                    </VideoPopupLink>
+                  ) : (
+                    <a
+                      {...linkProps(project.url)}
+                      className={`font-mono-label text-[10px] tracking-widest uppercase px-2 py-1 ${
+                        project.status === "Live"
+                          ? "bg-ink text-white"
+                          : "bg-surface text-ink-muted"
+                      }`}
+                    >
+                      {project.status}
+                    </a>
+                  )}
                 </div>
                 <Editable
                   as="p"

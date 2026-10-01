@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 
 const Arrow = () => (
   <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
@@ -14,14 +14,22 @@ const Arrow = () => (
   </svg>
 );
 
-const linkClass =
-  "font-mono-label text-[10px] tracking-widest uppercase text-ink flex items-center gap-1.5 hover:gap-3 transition-all";
+const isVideo = (href: string) => /\.(mp4|webm|mov)$/i.test(href);
 
-// A demo that is a video file plays in a popup on the page; anything else opens in a new tab.
-export function DemoLink({ href, title }: { href: string; title: string }) {
+// Opens a video file in a popup on the page; any other link opens in a new tab.
+export function VideoPopupLink({
+  href,
+  title,
+  className,
+  children,
+}: {
+  href: string;
+  title: string;
+  className: string;
+  children: ReactNode;
+}) {
   const [open, setOpen] = useState(false);
   const dialogRef = useRef<HTMLDialogElement>(null);
-  const isVideo = /\.(mp4|webm|mov)$/i.test(href);
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -30,20 +38,18 @@ export function DemoLink({ href, title }: { href: string; title: string }) {
     if (!open && dialog.open) dialog.close();
   }, [open]);
 
-  if (!isVideo) {
+  if (!isVideo(href)) {
     return (
-      <a href={href} target="_blank" rel="noopener noreferrer" className={linkClass}>
-        Live demo
-        <Arrow />
+      <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
+        {children}
       </a>
     );
   }
 
   return (
     <>
-      <button type="button" onClick={() => setOpen(true)} className={`${linkClass} cursor-pointer`}>
-        Live demo
-        <Arrow />
+      <button type="button" onClick={() => setOpen(true)} className={`${className} cursor-pointer`}>
+        {children}
       </button>
       <dialog
         ref={dialogRef}
@@ -78,5 +84,18 @@ export function DemoLink({ href, title }: { href: string; title: string }) {
         </div>
       </dialog>
     </>
+  );
+}
+
+export function DemoLink({ href, title }: { href: string; title: string }) {
+  return (
+    <VideoPopupLink
+      href={href}
+      title={title}
+      className="font-mono-label text-[10px] tracking-widest uppercase text-ink flex items-center gap-1.5 hover:gap-3 transition-all"
+    >
+      Live demo
+      <Arrow />
+    </VideoPopupLink>
   );
 }

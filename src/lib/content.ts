@@ -9,7 +9,7 @@ export type Project = {
   title: string;
   description: string;
   stack: string[];
-  status: "Live" | "In Progress";
+  status: "Live" | "Demo" | "In Progress";
   url: string;
   demo: string;
   docs: string;

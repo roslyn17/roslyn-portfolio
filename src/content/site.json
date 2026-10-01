@@ -39,7 +39,7 @@
         "Upstash Redis",
         "Claude Code"
       ],
-      "status": "Live",
+      "status": "Demo",
       "url": "#",
       "demo": "/projects/pep-squad-demo.mp4",
       "docs": "https://drive.google.com/file/d/1tUK8Xnwt65ct7zeJGH5cfXweofj3ifo2/view?usp=sharing",
@@ -105,8 +105,8 @@
   },
   "contact": {
     "eyebrow": "Contact",
-    "headingLine1": "Get In",
-    "headingLine2": "Touch",
+    "headingLine1": "Let's",
+    "headingLine2": "Chat",
     "links": [
       {
         "label": "Email",
