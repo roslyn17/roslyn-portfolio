@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import { isVideo } from "@/lib/video";
 
 const Arrow = () => (
   <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
@@ -13,8 +14,6 @@ const Arrow = () => (
     />
   </svg>
 );
-
-const isVideo = (href: string) => /\.(mp4|webm|mov)$/i.test(href);
 
 // Opens a video file in a popup on the page; any other link opens in a new tab.
 export function VideoPopupLink({
@@ -48,9 +47,17 @@ export function VideoPopupLink({
 
   return (
     <>
-      <button type="button" onClick={() => setOpen(true)} className={`${className} cursor-pointer`}>
+      {/* A real link to the video, so it still works before scripts load; a click opens the popup instead. */}
+      <a
+        href={href}
+        onClick={(e) => {
+          e.preventDefault();
+          setOpen(true);
+        }}
+        className={`${className} cursor-pointer`}
+      >
         {children}
-      </button>
+      </a>
       <dialog
         ref={dialogRef}
         onClose={() => setOpen(false)}
