@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { getContent } from "@/lib/content";
+import { DemoLink } from "./DemoLink";
 import { Editable } from "./Editable";
 
 const linkProps = (href: string) =>
@@ -82,21 +83,7 @@ export async function Projects() {
                       Live demo · Coming soon
                     </span>
                   ) : (
-                    <a
-                      {...linkProps(project.demo)}
-                      className="font-mono-label text-[10px] tracking-widest uppercase text-ink flex items-center gap-1.5 hover:gap-3 transition-all"
-                    >
-                      Live demo
-                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                        <path
-                          d="M1 6h10M6 1l5 5-5 5"
-                          stroke="currentColor"
-                          strokeWidth="1.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </a>
+                    <DemoLink href={project.demo} title={project.title} />
                   )}
                   <span className="text-border">|</span>
                   <a
