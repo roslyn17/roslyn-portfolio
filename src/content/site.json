@@ -1,8 +1,8 @@
 {
   "hero": {
     "eyebrow": "Hi, I'm Roslyn",
-    "titleLine1": "I like to",
-    "titleLine2": "build things.",
+    "titleLine1": "Hi, I am",
+    "titleLine2": "Roslyn",
     "ctaPrimary": "See my projects",
     "ctaSecondary": "Get in touch"
   },
@@ -82,9 +82,9 @@
     "eyebrow": "About",
     "heading": "student, builder, adventurer.",
     "paragraphs": [
-      "Hi, I'm Roslyn. I'm based in the Bay Area, but originally from the East Coast. Every project on this site was built to solve a real problem, or just for fun. ",
+      "Hi, I'm Roslyn. I'm based in the Bay Area, but originally from the East Coast.",
       "I hold Bachelor's degrees in Computer Science and Business Management from Case Western Reserve University, and I'm currently pursuing my MBA at UC Berkeley Haas. Before business school, I spent 5 years as a Consultant at Deloitte, working with Big Tech clients on privacy and infrastructure/data center projects.",
-      "I enjoy staying active and spending time outdoors. Tennis is my favorite sport, and I'm currently working on improving my photography skills. I'm also on a mission to visit all 50 states and every national park."
+      "I enjoy staying active and spending time outdoors. Tennis is my favorite sport, and I'm on a mission to visit every national park."
     ],
     "details": [
       {
@@ -101,7 +101,7 @@
         "caption": "Skiing in Colorado"
       },
       {
-        "caption": "Hanging out with the cacti at Joshua Tree National Park"
+        "caption": "Hiking in Joshua Tree National Park"
       }
     ]
   },
