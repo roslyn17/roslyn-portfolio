@@ -47,18 +47,20 @@
     },
     {
       "id": 3,
-      "title": "Shelf",
-      "description": "Track books you want to read, are reading, and have read. Syncs across devices. Built in 48 hours.",
+      "title": "Fan Fluent",
+      "description": "Learn sports teams by name, city and colors across five leagues: MLB, NBA, NFL, NHL and WNBA. Six quiz modes, extra practice on the teams you miss, and a different stadium-inspired look for each league. No accounts; it all runs in the browser.",
       "stack": [
-        "React Native",
-        "Expo",
-        "Firebase"
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Vercel",
+        "Claude Code"
       ],
-      "status": "In Progress",
-      "url": "#",
+      "status": "Live",
+      "url": "https://fan-fluent.vercel.app",
       "demo": "#",
       "docs": "#",
-      "image": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=500&fit=crop&auto=format"
+      "image": "/projects/fan-fluent-scoreboard.png"
     },
     {
       "id": 4,
