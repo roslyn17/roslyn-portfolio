@@ -19,10 +19,12 @@ export async function Hero() {
         </div>
         <div>
           <h1 className="font-display text-[clamp(3rem,7vw,5.5rem)] leading-[0.95] font-bold text-ink max-w-4xl mb-10">
-            <Editable path="hero.titleLine1" value={hero.titleLine1} />{" "}
+            <Editable path="hero.titleLine1" value={hero.titleLine1} />
+            <br />
+            <Editable path="hero.titleLine2" value={hero.titleLine2} />{" "}
             <Editable
-              path="hero.titleLine2"
-              value={hero.titleLine2}
+              path="hero.name"
+              value={hero.name}
               className="italic font-light"
             />
           </h1>

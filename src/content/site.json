@@ -1,8 +1,9 @@
 {
   "hero": {
     "eyebrow": "Hi, I'm Roslyn",
-    "titleLine1": "Hi, I am",
-    "titleLine2": "Roslyn",
+    "titleLine1": "Hi,",
+    "titleLine2": "I am",
+    "name": "Roslyn",
     "ctaPrimary": "See my projects",
     "ctaSecondary": "Get in touch"
   },
@@ -59,7 +60,6 @@
       "status": "Live",
       "url": "https://fan-fluent.vercel.app",
       "demo": "#",
-      "docs": "#",
       "image": "/projects/fan-fluent-scoreboard.png"
     },
     {

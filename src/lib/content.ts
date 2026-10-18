@@ -12,7 +12,7 @@ export type Project = {
   status: "Live" | "Demo" | "In Progress";
   url: string;
   demo: string;
-  docs: string;
+  docs?: string;
   image: string;
   imageFit?: "cover" | "contain";
 };
@@ -33,6 +33,7 @@ export type SiteContent = {
     eyebrow: string;
     titleLine1: string;
     titleLine2: string;
+    name: string;
     ctaPrimary: string;
     ctaSecondary: string;
   };
