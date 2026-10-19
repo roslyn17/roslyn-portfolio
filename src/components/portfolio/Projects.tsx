@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { getContent } from "@/lib/content";
 import { isVideo } from "@/lib/video";
-import { DemoLink, VideoPopupLink } from "./DemoLink";
+import { VideoPopupLink } from "./DemoLink";
 import { Editable } from "./Editable";
 
 const linkProps = (href: string) =>
@@ -104,7 +104,7 @@ export async function Projects() {
                   value={project.description}
                   className="text-sm text-ink-muted leading-relaxed mb-5 block flex-1"
                 />
-                <div className="flex gap-2 flex-wrap mb-5">
+                <div className="flex gap-2 flex-wrap">
                   {project.stack.map((tag, j) => (
                     <Editable
                       key={j}
@@ -114,36 +114,6 @@ export async function Projects() {
                     />
                   ))}
                 </div>
-                {(project.demo || project.docs) && (
-                  <div className="flex items-center gap-6 border-t border-border pt-4">
-                    {project.demo &&
-                      (project.demo === "#" ? (
-                        <span className="font-mono-label text-[10px] tracking-widest uppercase text-ink-muted">
-                          Live demo · Coming soon
-                        </span>
-                      ) : (
-                        <DemoLink href={project.demo} title={project.title} />
-                      ))}
-                    {project.demo && project.docs && <span className="text-border">|</span>}
-                    {project.docs && (
-                      <a
-                        {...linkProps(project.docs)}
-                        className="font-mono-label text-[10px] tracking-widest uppercase text-ink-muted hover:text-ink flex items-center gap-1.5 transition-colors"
-                      >
-                        Docs
-                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                          <path
-                            d="M1 6h10M6 1l5 5-5 5"
-                            stroke="currentColor"
-                            strokeWidth="1.5"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </a>
-                    )}
-                  </div>
-                )}
               </div>
             </div>
           ))}

@@ -9,25 +9,6 @@
   },
   "projects": [
     {
-      "id": 1,
-      "title": "bucketly",
-      "description": "Gamified bucket list app for travel and life goals. Browse curated lists like U.S. national parks, earn points based on difficulty, level up from Beginner to Grandmaster, and share your progress.",
-      "stack": [
-        "Next.js",
-        "TypeScript",
-        "Tailwind",
-        "Supabase",
-        "Vercel",
-        "Claude Code"
-      ],
-      "status": "Live",
-      "url": "https://bucketly-two.vercel.app/login",
-      "demo": "#",
-      "docs": "https://drive.google.com/file/d/1oPy-jaRyYgmBAxmjCDLlGmBewckPmA4h/view?usp=sharing",
-      "image": "/projects/bucketly-logo.png",
-      "imageFit": "contain"
-    },
-    {
       "id": 2,
       "title": "Pep Squad",
       "description": "A silly motivation app. Pick a character from your squad, like a drill sergeant, a golden retriever, or a disappointed Victorian ghost, and get an AI pep talk read out loud in their voice.",
@@ -43,23 +24,7 @@
       "status": "Demo",
       "url": "#",
       "demo": "/projects/pep-squad-demo.mp4",
-      "docs": "https://drive.google.com/file/d/1tUK8Xnwt65ct7zeJGH5cfXweofj3ifo2/view?usp=sharing",
       "image": "/projects/pep-squad.png"
-    },
-    {
-      "id": 3,
-      "title": "Fan Fluent",
-      "description": "Learn sports teams by name, city and colors across five leagues: MLB, NBA, NFL, NHL and WNBA. Six quiz modes, extra practice on the teams you miss, and a different stadium-inspired look for each league. No accounts; it all runs in the browser.",
-      "stack": [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Vercel",
-        "Claude Code"
-      ],
-      "status": "Live",
-      "url": "https://fan-fluent.vercel.app",
-      "image": "/projects/fan-fluent-scoreboard.png"
     },
     {
       "id": 4,
@@ -76,6 +41,38 @@
       "status": "Live",
       "url": "https://playwhenabouts.vercel.app",
       "image": "/projects/whenabouts-logo.png"
+    },
+    {
+      "id": 1,
+      "title": "bucketly",
+      "description": "Gamified bucket list app for travel and life goals. Browse curated lists like U.S. national parks, earn points based on difficulty, level up from Beginner to Grandmaster, and share your progress.",
+      "stack": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind",
+        "Supabase",
+        "Vercel",
+        "Claude Code"
+      ],
+      "status": "Live",
+      "url": "https://bucketly-two.vercel.app/login",
+      "image": "/projects/bucketly-logo.png",
+      "imageFit": "contain"
+    },
+    {
+      "id": 3,
+      "title": "Fan Fluent",
+      "description": "Learn sports teams by name, city and colors across five leagues: MLB, NBA, NFL, NHL and WNBA. Six quiz modes, extra practice on the teams you miss, and a different stadium-inspired look for each league. No accounts; it all runs in the browser.",
+      "stack": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Vercel",
+        "Claude Code"
+      ],
+      "status": "Live",
+      "url": "https://fan-fluent.vercel.app",
+      "image": "/projects/fan-fluent-scoreboard.png"
     }
   ],
   "about": {

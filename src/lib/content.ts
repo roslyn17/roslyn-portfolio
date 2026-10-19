@@ -12,7 +12,6 @@ export type Project = {
   status: "Live" | "Demo" | "In Progress";
   url: string;
   demo?: string;
-  docs?: string;
   image: string;
   imageFit?: "cover" | "contain";
 };

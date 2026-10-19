@@ -3,18 +3,6 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { isVideo } from "@/lib/video";
 
-const Arrow = () => (
-  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-    <path
-      d="M1 6h10M6 1l5 5-5 5"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-);
-
 // Opens a video file in a popup on the page; any other link opens in a new tab.
 export function VideoPopupLink({
   href,
@@ -94,15 +82,3 @@ export function VideoPopupLink({
   );
 }
 
-export function DemoLink({ href, title }: { href: string; title: string }) {
-  return (
-    <VideoPopupLink
-      href={href}
-      title={title}
-      className="font-mono-label text-[10px] tracking-widest uppercase text-ink flex items-center gap-1.5 hover:gap-3 transition-all"
-    >
-      Live demo
-      <Arrow />
-    </VideoPopupLink>
-  );
-}
