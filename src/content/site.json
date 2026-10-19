@@ -59,23 +59,23 @@
       ],
       "status": "Live",
       "url": "https://fan-fluent.vercel.app",
-      "demo": "#",
       "image": "/projects/fan-fluent-scoreboard.png"
     },
     {
       "id": 4,
-      "title": "DropNote",
-      "description": "A minimal note-dropping app — paste a thought, get a shareable link instantly. No accounts, no friction.",
+      "title": "Whenabouts",
+      "description": "A daily guess-the-year game. Flip clue cards like the price of milk, the year-end #1 song, or the Super Bowl champion, each costing points, then lock in your guess for the mystery year. A new puzzle every day.",
       "stack": [
         "React",
-        "Supabase",
-        "Tailwind"
+        "TypeScript",
+        "Vite",
+        "Vitest",
+        "Vercel",
+        "Claude Code"
       ],
       "status": "Live",
-      "url": "#",
-      "demo": "#",
-      "docs": "#",
-      "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=500&fit=crop&auto=format"
+      "url": "https://playwhenabouts.vercel.app",
+      "image": "/projects/whenabouts-logo.png"
     }
   ],
   "about": {

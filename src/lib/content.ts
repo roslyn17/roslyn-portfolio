@@ -11,7 +11,7 @@ export type Project = {
   stack: string[];
   status: "Live" | "Demo" | "In Progress";
   url: string;
-  demo: string;
+  demo?: string;
   docs?: string;
   image: string;
   imageFit?: "cover" | "contain";

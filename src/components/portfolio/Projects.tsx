@@ -10,7 +10,8 @@ const linkProps = (href: string) =>
 type Project = Awaited<ReturnType<typeof getContent>>["projects"][number];
 
 // A project with no site of its own but a demo video: its image and title play the video.
-const opensDemoVideo = (project: Project) => project.url === "#" && isVideo(project.demo);
+const opensDemoVideo = (project: Project) =>
+  project.url === "#" && !!project.demo && isVideo(project.demo);
 
 const imageBoxClass = "block relative overflow-hidden bg-surface h-52";
 
@@ -47,7 +48,7 @@ export async function Projects() {
               }`}
             >
               {opensDemoVideo(project) ? (
-                <VideoPopupLink href={project.demo} title={project.title} className={imageBoxClass}>
+                <VideoPopupLink href={project.demo!} title={project.title} className={imageBoxClass}>
                   {projectImage(project)}
                 </VideoPopupLink>
               ) : (
@@ -58,7 +59,7 @@ export async function Projects() {
               <div className="p-7 flex flex-col flex-1">
                 <div className="flex items-center justify-between mb-3">
                   {opensDemoVideo(project) ? (
-                    <VideoPopupLink href={project.demo} title={project.title} className="">
+                    <VideoPopupLink href={project.demo!} title={project.title} className="">
                       <Editable
                         as="h3"
                         path={`projects.${i}.title`}
@@ -76,7 +77,7 @@ export async function Projects() {
                       />
                     </a>
                   )}
-                  {project.status === "Demo" && project.demo !== "#" ? (
+                  {project.status === "Demo" && project.demo && project.demo !== "#" ? (
                     <VideoPopupLink
                       href={project.demo}
                       title={project.title}
@@ -113,17 +114,18 @@ export async function Projects() {
                     />
                   ))}
                 </div>
-                <div className="flex items-center gap-6 border-t border-border pt-4">
-                  {project.demo === "#" ? (
-                    <span className="font-mono-label text-[10px] tracking-widest uppercase text-ink-muted">
-                      Live demo · Coming soon
-                    </span>
-                  ) : (
-                    <DemoLink href={project.demo} title={project.title} />
-                  )}
-                  {project.docs && (
-                    <>
-                      <span className="text-border">|</span>
+                {(project.demo || project.docs) && (
+                  <div className="flex items-center gap-6 border-t border-border pt-4">
+                    {project.demo &&
+                      (project.demo === "#" ? (
+                        <span className="font-mono-label text-[10px] tracking-widest uppercase text-ink-muted">
+                          Live demo · Coming soon
+                        </span>
+                      ) : (
+                        <DemoLink href={project.demo} title={project.title} />
+                      ))}
+                    {project.demo && project.docs && <span className="text-border">|</span>}
+                    {project.docs && (
                       <a
                         {...linkProps(project.docs)}
                         className="font-mono-label text-[10px] tracking-widest uppercase text-ink-muted hover:text-ink flex items-center gap-1.5 transition-colors"
@@ -139,9 +141,9 @@ export async function Projects() {
                           />
                         </svg>
                       </a>
-                    </>
-                  )}
-                </div>
+                    )}
+                  </div>
+                )}
               </div>
             </div>
           ))}
