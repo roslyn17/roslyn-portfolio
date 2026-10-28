@@ -14,6 +14,8 @@ export type Project = {
   demo?: string;
   image: string;
   imageFit?: "cover" | "contain";
+  // Short label under the title, e.g. why a project only has a demo video.
+  note?: string;
 };
 
 export type Detail = {

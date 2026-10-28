@@ -11,6 +11,7 @@
     {
       "id": 2,
       "title": "Pep Squad",
+      "note": "Mobile app · Demo video only",
       "description": "A silly motivation app. Pick a character from your squad, like a drill sergeant, a golden retriever, or a disappointed Victorian ghost, and get an AI pep talk read out loud in their voice.",
       "stack": [
         "React Native",
@@ -29,6 +30,7 @@
     {
       "id": 4,
       "title": "Whenabouts",
+      "note": "Web app",
       "description": "A daily guess-the-year game. Flip clue cards like the price of milk, the year-end #1 song, or the Super Bowl champion, each costing points, then lock in your guess for the mystery year. A new puzzle every day.",
       "stack": [
         "React",
@@ -45,6 +47,7 @@
     {
       "id": 1,
       "title": "bucketly",
+      "note": "Web app",
       "description": "Gamified bucket list app for travel and life goals. Browse curated lists like U.S. national parks, earn points based on difficulty, level up from Beginner to Grandmaster, and share your progress.",
       "stack": [
         "Next.js",
@@ -63,6 +66,7 @@
     {
       "id": 3,
       "title": "Fan Fluent",
+      "note": "Web app",
       "description": "Learn sports teams by name, city and colors across five leagues: MLB, NBA, NFL, NHL and WNBA. Six quiz modes, extra practice on the teams you miss, and a different stadium-inspired look for each league. No accounts; it all runs in the browser.",
       "stack": [
         "HTML",

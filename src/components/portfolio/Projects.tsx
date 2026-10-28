@@ -17,6 +17,9 @@ const opensDemoVideo = (project: Project) =>
 const hasSiteAndDemoVideo = (project: Project) =>
   project.url !== "#" && !!project.demo && isVideo(project.demo);
 
+const demoBadgeClass =
+  "font-mono-label text-[10px] tracking-widest uppercase px-2 py-1 border border-ink text-ink hover:bg-ink hover:text-white transition-colors";
+
 const imageBoxClass = "block relative overflow-hidden bg-surface h-52";
 
 const projectImage = (project: Project) => (
@@ -86,7 +89,7 @@ export async function Projects() {
                       <VideoPopupLink
                         href={project.demo}
                         title={project.title}
-                        className="font-mono-label text-[10px] tracking-widest uppercase px-2 py-1 bg-ink text-white"
+                        className={demoBadgeClass}
                       >
                         {project.status}
                       </VideoPopupLink>
@@ -106,13 +109,21 @@ export async function Projects() {
                       <VideoPopupLink
                         href={project.demo!}
                         title={project.title}
-                        className="font-mono-label text-[10px] tracking-widest uppercase px-2 py-1 border border-ink text-ink hover:bg-ink hover:text-white transition-colors"
+                        className={demoBadgeClass}
                       >
                         Demo
                       </VideoPopupLink>
                     )}
                   </div>
                 </div>
+                {project.note && (
+                  <Editable
+                    as="p"
+                    path={`projects.${i}.note`}
+                    value={project.note}
+                    className="font-mono-label text-[10px] tracking-widest uppercase text-ink-muted mb-3 block"
+                  />
+                )}
                 <Editable
                   as="p"
                   path={`projects.${i}.description`}
