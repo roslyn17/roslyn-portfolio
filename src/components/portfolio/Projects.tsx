@@ -13,6 +13,10 @@ type Project = Awaited<ReturnType<typeof getContent>>["projects"][number];
 const opensDemoVideo = (project: Project) =>
   project.url === "#" && !!project.demo && isVideo(project.demo);
 
+// A project with its own site and a demo video gets a separate Demo badge that plays the video.
+const hasSiteAndDemoVideo = (project: Project) =>
+  project.url !== "#" && !!project.demo && isVideo(project.demo);
+
 const imageBoxClass = "block relative overflow-hidden bg-surface h-52";
 
 const projectImage = (project: Project) => (
@@ -77,26 +81,37 @@ export async function Projects() {
                       />
                     </a>
                   )}
-                  {project.status === "Demo" && project.demo && project.demo !== "#" ? (
-                    <VideoPopupLink
-                      href={project.demo}
-                      title={project.title}
-                      className="font-mono-label text-[10px] tracking-widest uppercase px-2 py-1 bg-ink text-white"
-                    >
-                      {project.status}
-                    </VideoPopupLink>
-                  ) : (
-                    <a
-                      {...linkProps(project.url)}
-                      className={`font-mono-label text-[10px] tracking-widest uppercase px-2 py-1 ${
-                        project.status === "Live"
-                          ? "bg-ink text-white"
-                          : "bg-surface text-ink-muted"
-                      }`}
-                    >
-                      {project.status}
-                    </a>
-                  )}
+                  <div className="flex items-center gap-2">
+                    {project.status === "Demo" && project.demo && project.demo !== "#" ? (
+                      <VideoPopupLink
+                        href={project.demo}
+                        title={project.title}
+                        className="font-mono-label text-[10px] tracking-widest uppercase px-2 py-1 bg-ink text-white"
+                      >
+                        {project.status}
+                      </VideoPopupLink>
+                    ) : (
+                      <a
+                        {...linkProps(project.url)}
+                        className={`font-mono-label text-[10px] tracking-widest uppercase px-2 py-1 ${
+                          project.status === "Live"
+                            ? "bg-ink text-white"
+                            : "bg-surface text-ink-muted"
+                        }`}
+                      >
+                        {project.status}
+                      </a>
+                    )}
+                    {hasSiteAndDemoVideo(project) && (
+                      <VideoPopupLink
+                        href={project.demo!}
+                        title={project.title}
+                        className="font-mono-label text-[10px] tracking-widest uppercase px-2 py-1 border border-ink text-ink hover:bg-ink hover:text-white transition-colors"
+                      >
+                        Demo
+                      </VideoPopupLink>
+                    )}
+                  </div>
                 </div>
                 <Editable
                   as="p"
