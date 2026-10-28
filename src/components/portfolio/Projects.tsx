@@ -65,25 +65,34 @@ export async function Projects() {
               )}
               <div className="p-7 flex flex-col flex-1">
                 <div className="flex items-center justify-between mb-3">
-                  {opensDemoVideo(project) ? (
-                    <VideoPopupLink href={project.demo!} title={project.title} className="">
+                  <div className="flex items-baseline gap-3 flex-wrap">
+                    {opensDemoVideo(project) ? (
+                      <VideoPopupLink href={project.demo!} title={project.title} className="">
+                        <Editable
+                          as="h3"
+                          path={`projects.${i}.title`}
+                          value={project.title}
+                          className="font-display text-2xl font-bold text-ink"
+                        />
+                      </VideoPopupLink>
+                    ) : (
+                      <a {...linkProps(project.url)}>
+                        <Editable
+                          as="h3"
+                          path={`projects.${i}.title`}
+                          value={project.title}
+                          className="font-display text-2xl font-bold text-ink"
+                        />
+                      </a>
+                    )}
+                    {project.note && (
                       <Editable
-                        as="h3"
-                        path={`projects.${i}.title`}
-                        value={project.title}
-                        className="font-display text-2xl font-bold text-ink"
+                        path={`projects.${i}.note`}
+                        value={project.note}
+                        className="font-mono-label text-[10px] tracking-widest uppercase text-ink-muted"
                       />
-                    </VideoPopupLink>
-                  ) : (
-                    <a {...linkProps(project.url)}>
-                      <Editable
-                        as="h3"
-                        path={`projects.${i}.title`}
-                        value={project.title}
-                        className="font-display text-2xl font-bold text-ink"
-                      />
-                    </a>
-                  )}
+                    )}
+                  </div>
                   <div className="flex items-center gap-2">
                     {project.status === "Demo" && project.demo && project.demo !== "#" ? (
                       <VideoPopupLink
@@ -91,18 +100,18 @@ export async function Projects() {
                         title={project.title}
                         className={demoBadgeClass}
                       >
-                        {project.status}
+                        Play demo
                       </VideoPopupLink>
                     ) : (
                       <a
                         {...linkProps(project.url)}
                         className={`font-mono-label text-[10px] tracking-widest uppercase px-2 py-1 ${
-                          project.status === "Live"
+                          project.status === "Web app"
                             ? "bg-ink text-white"
                             : "bg-surface text-ink-muted"
                         }`}
                       >
-                        {project.status}
+                        {project.status === "Web app" ? "Visit site" : project.status}
                       </a>
                     )}
                     {hasSiteAndDemoVideo(project) && (
@@ -111,19 +120,11 @@ export async function Projects() {
                         title={project.title}
                         className={demoBadgeClass}
                       >
-                        Demo
+                        Play demo
                       </VideoPopupLink>
                     )}
                   </div>
                 </div>
-                {project.note && (
-                  <Editable
-                    as="p"
-                    path={`projects.${i}.note`}
-                    value={project.note}
-                    className="font-mono-label text-[10px] tracking-widest uppercase text-ink-muted mb-3 block"
-                  />
-                )}
                 <Editable
                   as="p"
                   path={`projects.${i}.description`}

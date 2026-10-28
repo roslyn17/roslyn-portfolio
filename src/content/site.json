@@ -11,7 +11,7 @@
     {
       "id": 2,
       "title": "Pep Squad",
-      "note": "Mobile app · Demo video only",
+      "note": "Mobile app",
       "description": "A silly motivation app. Pick a character from your squad, like a drill sergeant, a golden retriever, or a disappointed Victorian ghost, and get an AI pep talk read out loud in their voice.",
       "stack": [
         "React Native",
@@ -40,7 +40,7 @@
         "Vercel",
         "Claude Code"
       ],
-      "status": "Live",
+      "status": "Web app",
       "url": "https://playwhenabouts.vercel.app",
       "image": "/projects/whenabouts-logo.png"
     },
@@ -57,7 +57,7 @@
         "Vercel",
         "Claude Code"
       ],
-      "status": "Live",
+      "status": "Web app",
       "url": "https://bucketly-two.vercel.app/login",
       "demo": "/projects/bucketly-demo.mp4",
       "image": "/projects/bucketly-logo.png",
@@ -75,7 +75,7 @@
         "Vercel",
         "Claude Code"
       ],
-      "status": "Live",
+      "status": "Web app",
       "url": "https://fan-fluent.vercel.app",
       "image": "/projects/fan-fluent-scoreboard.png"
     }
